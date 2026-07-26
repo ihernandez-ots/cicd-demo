@@ -5,26 +5,36 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                echo 'Checking out source...'
+                checkout scm
             }
         }
 
-        stage('Build') {
+        stage('Extract Metadata') {
             steps {
-                echo 'Building project...'
+                bat 'python scripts\\extract_metadata.py'
             }
         }
 
-        stage('Test') {
+        stage('Upload File Storage') {
             steps {
-                echo 'Testing...'
+                bat 'python scripts\\upload_filestorage.py'
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy PAS') {
             steps {
-                echo 'Deploy successful!'
+                bat 'python scripts\\deploy_pas.py'
             }
+        }
+    }
+
+    post {
+        success {
+            echo "Deployment successful"
+        }
+
+        failure {
+            echo "Deployment failed"
         }
     }
 }
