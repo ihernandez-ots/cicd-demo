@@ -15,6 +15,12 @@ pipeline {
             }
         }
 
+        stage('Get Token') {
+            steps {
+                bat 'python scripts\\get_token.py'
+            }
+        }
+
         stage('Upload File Storage') {
             steps {
                 bat 'python scripts\\upload_filestorage.py'
@@ -23,7 +29,7 @@ pipeline {
 
         stage('Deploy PAS') {
             steps {
-                bat 'python scripts\\deploy_pas.py'
+                bat 'python scripts\\deploy.py'
             }
         }
     }
