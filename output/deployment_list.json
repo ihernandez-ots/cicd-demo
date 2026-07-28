@@ -1,0 +1,2167 @@
+[
+    {
+        "path": "rep\\eFils20260611.rep",
+        "filename": "efils20260611.rep",
+        "name": "eFils",
+        "version": "1.1.0",
+        "compiler": "7.17.0",
+        "time": "2022-03-14T20:14:44+08:00",
+        "status": "XUML_DEPLOYED",
+        "file_id": "23074e5d-34f9-4981-9c5a-0ea17af50a01",
+        "docker_image": "harbor.onetoolapps.com:30003/pas/efils20260611:1.1.0",
+        "docker_image_id": "sha256:70233ed48764535f6c65f467c29fae84e1b21a0547ede0b65ee1c10e5347f919",
+        "harbor_response": {
+            "name": "harbor.onetoolapps.com:30003/pas/efils20260611:1.1.0",
+            "image": {
+                "id": "sha256:70233ed48764535f6c65f467c29fae84e1b21a0547ede0b65ee1c10e5347f919",
+                "type": "xuml-service"
+            }
+        },
+        "xuml_response": {
+            "deployContainerResponse": {
+                "id": "pas-efils20260611",
+                "name": "efils20260611",
+                "hostname": "pas-efils20260611"
+            },
+            "xumlConfig": {
+                "name": "harbor.onetoolapps.com:30003/pas/efils20260611:1.1.0",
+                "image": {
+                    "id": "sha256:70233ed48764535f6c65f467c29fae84e1b21a0547ede0b65ee1c10e5347f919",
+                    "type": "xuml-service"
+                },
+                "build": {
+                    "date": 1785282963312,
+                    "user": "vvallejo",
+                    "labels": {
+                        "com.scheer-pas.build-user": "vvallejo",
+                        "com.scheer-pas.container-type": "xuml-service",
+                        "com.scheer-pas.base-image": "pcr.pas-cloud.com/pas/xuml-service-base:2025.12"
+                    }
+                },
+                "meta": {
+                    "addons": [
+                        "Flows",
+                        "Functions",
+                        "XML_Function",
+                        "SOAP_AddOn",
+                        "REST_AddOn",
+                        "SQL_AddOn",
+                        "URL_AddOn",
+                        "LOG_AddOn",
+                        "JSON_AddOn"
+                    ],
+                    "modules": [
+                        {
+                            "compilationDate": "2022-03-14T20:14:44+08:00",
+                            "compilerVersion": "7.17.0",
+                            "name": "eFils",
+                            "source": "eFilsUML.xml",
+                            "type": "composite",
+                            "version": "1.1.0"
+                        },
+                        {
+                            "compilationDate": "2020-07-10T14:15:44+08:00",
+                            "compilerVersion": "7.7.2",
+                            "name": "libSendMailWrapper",
+                            "source": "libSendMailWrapper.xml",
+                            "type": "library",
+                            "version": "2.0.0"
+                        }
+                    ],
+                    "notes": [
+                        {
+                            "doc": "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <h2>\nChange Log</h2>\n    <table class=\"table\">\n      <tr>\n        <th>\nDate</th>\n        <th>\nAuthor</th>\n        <th>\nVersion</th>\n        <th>\nImplementation</th>\n        <th>\nNote</th>\n      </tr>\n      <tr>\n<td>01.23.2022</td>\n<td>alavides</td>\n<td>1.0.0</td>\n<td>Initial Creation</td>\n<td></td>\n      </tr>\n      <tr>\n<td>02.22.2022</td>\n<td>alavides&#160;</td>\n<td>1.0.1</td>\n<td>&#160;Added notification of email after DB error</td>\n<td>&#160;</td>\n      </tr>\n      <tr>\n<td>&#160;03.14.2022</td>\n<td>&#160;alavides</td>\n<td>&#160;1.1.0</td>\n<td>&#160;In Get instance by id - Prepare Query for data retrieval of INSTLIB and INSTPLG - change inner join to left join. Add validation for length of date parameters and if they are less than zero</td>\n<td>&#160;</td>\n      </tr>\n    </table>\n</body>\n</html> <html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n<span style=\"font-size:18.0pt;\">Description</span>\n    </p>\n\n    <p>\n&#160;\n    </p>\n\n    <p>\nDocumentation details regarding this UML Example can be found in the E2E Documentation at <a href=\"http://e2ebridge.com\">e2ebridge.com</a>.\n    </p>\n\n    <p>\n&#160;\n    </p>\n\n    <p>\n<a href=\"http://docu.e2ebridge.com/Reference+Guide\">E2E Reference Guide</a> - <b>Advanced Behavioral Modeling</b> - <a href=\"http://docu.e2ebridge.com/Security+Model\">Security Model</a>&#160;\n\n    </p>\n\n</body>\n</html>",
+                            "isIndex": true,
+                            "name": "eFilsUML_1088489838.html"
+                        },
+                        {
+                            "doc": "<html>\n  <head>\n\t\t<style>\n\t\t\tp {padding:0px; margin:0px;}\n\t\t</style>\n\t</head>\n  <body>\n    <p>\n&#160;\n    </p>\n\n    <h2 id=\"HowtoAddModelDocumentationfortheBRIDGE-ShortDescription\" style=\"padding:0px;margin:2em 0px 0px;color:rgb(5, 97, 141);font-size:20px;font-weight:normal;line-height:1.5;letter-spacing:-0.008em;text-transform:none;font-family:Roboto, Arial, Helvetica, FreeSans, sans-serif;font-style:normal;text-align:start;text-indent:0px;white-space:normal;word-spacing:0px;background-color:rgb(255, 255, 255);orphans:2;widows:2;\">\nShort Description</h2>\n    <ul style=\"margin:1.1em 0px 0px 1.21429em;list-style-type:disc;list-style-image:url(/scheer/icon_bullet_blue.png);padding-left:1.21429em;color:rgb(51, 51, 51);font-family:Roboto, Arial, Helvetica, FreeSans, sans-serif;font-size:14px;font-style:normal;font-weight:400;letter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255, 255, 255);orphans:2;widows:2;\">\n      <li style=\"margin-top:0em;\">\nThis is a wrapper library for BaseServiceSendMail REST&#160;API.\n      </li>\n    </ul>\n    <h2 id=\"HowtoAddModelDocumentationfortheBRIDGE-Concepts\" style=\"padding:0px;margin:2em 0px 0px;color:rgb(5, 97, 141);font-size:20px;font-weight:normal;line-height:1.5;letter-spacing:-0.008em;text-transform:none;font-family:Roboto, Arial, Helvetica, FreeSans, sans-serif;font-style:normal;text-align:start;text-indent:0px;white-space:normal;word-spacing:0px;background-color:rgb(255, 255, 255);orphans:2;widows:2;\">\nTechnical Details</h2>\n    <ul style=\"margin:1.1em 0px 0px 1.21429em;list-style-type:disc;list-style-image:url(/scheer/icon_bullet_blue.png);padding-left:1.21429em;color:rgb(51, 51, 51);font-family:Roboto, Arial, Helvetica, FreeSans, sans-serif;font-size:14px;font-style:normal;font-weight:400;letter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;background-color:rgb(255, 255, 255);orphans:2;widows:2;\">\n      <li>\nSendEmailAPI\n        <ul style=\"margin:0.5em 0px 0px 1.21429em;list-style-type:disc;list-style-image:url(/scheer/icon_bullet_2.png;);padding-left:1.21429em;\">\n          <li style=\"margin-top:0em;\">\nsend - POST method for sending email.\n          </li>\n        </ul>\n\n      </li>\n      <li style=\"margin-top:0.5em;\">\nTechnical dependencies\n        <ul style=\"margin:0.5em 0px 0px 1.21429em;list-style-type:disc;list-style-image:url(/scheer/icon_bullet_2.png;);padding-left:1.21429em;\">\n          <li>\n<a href=\"https://wiki.e2ebridge.com/display/XLIB/Send+Email+Base+Service\">https://wiki.e2ebridge.com/display/XLIB/Send+Email+Base+Service</a>\n          </li>\n          <li>\n<a href=\"https://doc.scheer-pas.com/display/BRIDGE/JavaMail+Adapter\">https://doc.scheer-pas.com/display/BRIDGE/JavaMail+Adapter</a>\n          </li>\n        </ul>\n\n      </li>\n    </ul>\n    <p>\n&#160;\n\n    </p>\n\n</body>\n</html>",
+                            "name": "libSendMailWrapper_568763032.html"
+                        }
+                    ],
+                    "services": [
+                        {
+                            "endpoints": [
+                                {
+                                    "descriptor": "/e2e.rest.descriptors/xUMLControllerService.xUML Runtime API.yaml",
+                                    "name": "xUML Runtime API",
+                                    "path": "/api",
+                                    "version": "1.2.0"
+                                }
+                            ],
+                            "name": "xUMLControllerService",
+                            "port": 21119,
+                            "type": "control"
+                        },
+                        {
+                            "endpoints": [
+                                {
+                                    "descriptor": "/e2e.rest.descriptors/RESTService.eFilsRest.yaml",
+                                    "name": "eFilsRest",
+                                    "path": "/eFilsRest",
+                                    "version": "1.0.1"
+                                }
+                            ],
+                            "name": "RESTService",
+                            "port": 11119,
+                            "type": "rest"
+                        },
+                        {
+                            "endpoints": [
+                                {
+                                    "name": "eFilsRest",
+                                    "path": "/eFilsRest"
+                                }
+                            ],
+                            "name": "RESTService",
+                            "port": 51119,
+                            "type": "shadow",
+                            "wsdl": "/RESTService?wsdl"
+                        }
+                    ],
+                    "settings": [
+                        {
+                            "aliases": [
+                                "ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_basePath"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "/base/api/sendmail/SendEmailAPI",
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): SendEmailAPIAlias: Location: basePath: "
+                            },
+                            "name": "ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_basePath",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_basePath",
+                                "val": "/base/api/sendmail/SendEmailAPI"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_host"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "localhost",
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): SendEmailAPIAlias: Location: host: "
+                            },
+                            "name": "ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_host",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_host",
+                                "val": "localhost"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_port"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "5445",
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): SendEmailAPIAlias: Location: port: "
+                            },
+                            "name": "ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_port",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_port",
+                                "val": "5445"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_protocol"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "https",
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): SendEmailAPIAlias: Location: protocol: "
+                            },
+                            "name": "ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_protocol",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_protocol",
+                                "val": "https"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_verifyPeer"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "Off",
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): SendEmailAPIAlias: SSL: verifyPeer: "
+                            },
+                            "name": "ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_verifyPeer",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_verifyPeer",
+                                "val": "Off"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_verifyHost"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "Off",
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): SendEmailAPIAlias: SSL: verifyHost: "
+                            },
+                            "name": "ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_verifyHost",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_verifyHost",
+                                "val": "Off"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_CAInfo"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "./",
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): SendEmailAPIAlias: SSL: CAInfo: "
+                            },
+                            "name": "ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_CAInfo",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_CAInfo",
+                                "val": "./"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_libSendMailWrapper__SendEmailAPIAlias_JSONComposerOptions_keepNulls"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": false,
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): SendEmailAPIAlias: JSONComposerOptions: keepNulls: "
+                            },
+                            "name": "ALIAS_libSendMailWrapper__SendEmailAPIAlias_JSONComposerOptions_keepNulls",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_JSONComposerOptions_keepNulls",
+                                "val": "false"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_libSendMailWrapper__SendEmailAPIAlias_JSONComposerOptions_compact"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): SendEmailAPIAlias: JSONComposerOptions: compact: "
+                            },
+                            "name": "ALIAS_libSendMailWrapper__SendEmailAPIAlias_JSONComposerOptions_compact",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_JSONComposerOptions_compact",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_libSendMailWrapper__UILibraryPath_UILibraryCacheControl"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "max-age=2592000, public",
+                            "label": {
+                                "_": "libSendMailWrapper (Lib): Library Cache Control: value: "
+                            },
+                            "name": "addOn_libSendMailWrapper__UILibraryPath_UILibraryCacheControl",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SOAP HTTP UI Server",
+                            "docker": {
+                                "env": "XUMLT_S_addOn_libSendMailWrapper__UILibraryPath_UILibraryCacheControl",
+                                "val": "max-age=2592000, public"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_core.dump.not-catched-errors",
+                                "SETTING_B5864D242EA04543E238752BA662BA0A"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "true",
+                            "label": {
+                                "_": "Dump Not Caught Errors: enabled: "
+                            },
+                            "name": "SETTING_B5864D242EA04543E238752BA662BA0A",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Dump Configuration",
+                            "docker": {
+                                "env": "XUMLT_S_SETTING_B5864D242EA04543E238752BA662BA0A",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_core.dump.not-catched-errors_core.dump.catched-errors",
+                                "SETTING_06637E9D6BC72B9D792F3E8166F51E96"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "false",
+                            "label": {
+                                "_": "Dump Caught Errors: enabled: "
+                            },
+                            "name": "SETTING_06637E9D6BC72B9D792F3E8166F51E96",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Dump Configuration",
+                            "docker": {
+                                "env": "XUMLT_S_SETTING_06637E9D6BC72B9D792F3E8166F51E96",
+                                "val": "false"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_core.dump.not-catched-errors_core.dump.catched-errors_core.dump.catched-errors.domain",
+                                "SETTING_A6C7265FCEFC596D14DF14FAEBCCA214"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "*",
+                            "label": {
+                                "_": "Caught Error Domain (MY_DOMAIN|*): "
+                            },
+                            "name": "SETTING_A6C7265FCEFC596D14DF14FAEBCCA214",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Dump Configuration",
+                            "docker": {
+                                "env": "XUMLT_S_SETTING_A6C7265FCEFC596D14DF14FAEBCCA214",
+                                "val": "*"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_core.dump.not-catched-errors_core.dump.catched-errors_core.dump.catched-errors.code",
+                                "SETTING_2FBEC414E81CD49B3CA726C20103040B"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "*",
+                            "label": {
+                                "_": "Caught Error Code (MY_CODE|*): "
+                            },
+                            "name": "SETTING_2FBEC414E81CD49B3CA726C20103040B",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Dump Configuration",
+                            "docker": {
+                                "env": "XUMLT_S_SETTING_2FBEC414E81CD49B3CA726C20103040B",
+                                "val": "*"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_UILibraryPath_UILibraryCacheControl"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "max-age=2592000, public",
+                            "label": {
+                                "_": "Library Cache Control: value: "
+                            },
+                            "name": "addOn_UILibraryPath_UILibraryCacheControl",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SOAP HTTP UI Server",
+                            "docker": {
+                                "env": "XUMLT_S_addOn_UILibraryPath_UILibraryCacheControl",
+                                "val": "max-age=2592000, public"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_Persistent State_WorkerLimit",
+                                "AL_PS_WORKERLIMIT"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "2",
+                            "label": {
+                                "_": "Persistent State: WorkerLimit: "
+                            },
+                            "name": "AL_PS_WORKERLIMIT",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Persistent State",
+                            "docker": {
+                                "env": "XUMLT_S_AL_PS_WORKERLIMIT",
+                                "val": "2"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_Persistent State_Owner",
+                                "AL_PS_OWNER"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "eFils",
+                            "label": {
+                                "_": "Persistent State: Owner: "
+                            },
+                            "name": "AL_PS_OWNER",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Persistent State",
+                            "docker": {
+                                "env": "XUMLT_S_AL_PS_OWNER",
+                                "val": "eFils"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SQLAlias_DBType",
+                                "AO_SQLALIAS_DBTYPE"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "DB2",
+                            "label": {
+                                "_": "SQLAlias: DB Type: "
+                            },
+                            "name": "AO_SQLALIAS_DBTYPE",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SQL Adapter Connection",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SQLALIAS_DBTYPE",
+                                "val": "DB2"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SQLAlias_DBName",
+                                "AO_SQLALIAS_DBNAME"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "con",
+                            "label": {
+                                "_": "SQLAlias: DB Name: "
+                            },
+                            "name": "AO_SQLALIAS_DBNAME",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SQL Adapter Connection",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SQLALIAS_DBNAME",
+                                "val": "con"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SQLAlias_UnicodeMode",
+                                "AO_SQLALIAS_UNICODEMODE"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "Platform default",
+                            "label": {
+                                "_": "SQLAlias: Unicode Mode (Platform default | Unicode | non-Unicode): "
+                            },
+                            "name": "AO_SQLALIAS_UNICODEMODE",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SQL Adapter Connection",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SQLALIAS_UNICODEMODE",
+                                "val": "Platform default"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SQLAlias_ConnectionPooling",
+                                "AO_SQLALIAS_CONNECTIONPOOLING"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "true",
+                            "label": {
+                                "_": "SQLAlias: Connection Pooling (true | false): "
+                            },
+                            "name": "AO_SQLALIAS_CONNECTIONPOOLING",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SQL Adapter Connection",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SQLALIAS_CONNECTIONPOOLING",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SQLAlias_MaxConnectionReuse",
+                                "AO_SQLALIAS_MAXCONNECTIONREUSE"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "1000",
+                            "label": {
+                                "_": "SQLAlias: Max Connection Reuse: "
+                            },
+                            "name": "AO_SQLALIAS_MAXCONNECTIONREUSE",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SQL Adapter Connection",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SQLALIAS_MAXCONNECTIONREUSE",
+                                "val": "1000"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SQLAlias_MaxConnectionAge",
+                                "AO_SQLALIAS_MAXCONNECTIONAGE"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "15",
+                            "label": {
+                                "_": "SQLAlias: Max Connection Age (minutes): "
+                            },
+                            "name": "AO_SQLALIAS_MAXCONNECTIONAGE",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SQL Adapter Connection",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SQLALIAS_MAXCONNECTIONAGE",
+                                "val": "15"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SQLAlias_MaxConnectionIdleTime",
+                                "AO_SQLALIAS_MAXCONNECTIONIDLETIME"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "60",
+                            "label": {
+                                "_": "SQLAlias: Max Connection Idle Time (minutes): "
+                            },
+                            "name": "AO_SQLALIAS_MAXCONNECTIONIDLETIME",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SQL Adapter Connection",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SQLALIAS_MAXCONNECTIONIDLETIME",
+                                "val": "60"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SQLAuthorization_SQLAlias_DBUser",
+                                "AO_SQLALIAS_USER"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "user",
+                            "label": {
+                                "_": "SQLAlias: DBUser: "
+                            },
+                            "name": "AO_SQLALIAS_USER",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SQL Adapter Authorization",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SQLALIAS_USER",
+                                "val": "user"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SQLAuthorization_SQLAlias_DBPassword",
+                                "AO_SQLALIAS_PWD"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "test",
+                            "label": {
+                                "_": "SQLAlias: DBPassword: "
+                            },
+                            "name": "AO_SQLALIAS_PWD",
+                            "schema": {
+                                "type": "password"
+                            },
+                            "section": "SQL Adapter Authorization",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SQLALIAS_PWD",
+                                "val": "test"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_getCompositeName"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "eFils",
+                            "label": {
+                                "_": "getCompositeName: "
+                            },
+                            "name": "global_getCompositeName",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_global_getCompositeName",
+                                "val": "eFils"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::chcode05",
+                                "G_SETTINGSCLASS_CHCODE05"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "13",
+                            "label": {
+                                "_": "SettingsClass::chcode05: "
+                            },
+                            "name": "G_SETTINGSCLASS_CHCODE05",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_CHCODE05",
+                                "val": "13"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::chcode06",
+                                "G_SETTINGSCLASS_CHCODE06"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "13",
+                            "label": {
+                                "_": "SettingsClass::chcode06: "
+                            },
+                            "name": "G_SETTINGSCLASS_CHCODE06",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_CHCODE06",
+                                "val": "13"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::chcode10",
+                                "G_SETTINGSCLASS_CHCODE10"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "13",
+                            "label": {
+                                "_": "SettingsClass::chcode10: "
+                            },
+                            "name": "G_SETTINGSCLASS_CHCODE10",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_CHCODE10",
+                                "val": "13"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::chcode11",
+                                "G_SETTINGSCLASS_CHCODE11"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "15",
+                            "label": {
+                                "_": "SettingsClass::chcode11: "
+                            },
+                            "name": "G_SETTINGSCLASS_CHCODE11",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_CHCODE11",
+                                "val": "15"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::chcode12",
+                                "G_SETTINGSCLASS_CHCODE12"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "15",
+                            "label": {
+                                "_": "SettingsClass::chcode12: "
+                            },
+                            "name": "G_SETTINGSCLASS_CHCODE12",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_CHCODE12",
+                                "val": "15"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::chcode13",
+                                "G_SETTINGSCLASS_CHCODE13"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "16",
+                            "label": {
+                                "_": "SettingsClass::chcode13: "
+                            },
+                            "name": "G_SETTINGSCLASS_CHCODE13",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_CHCODE13",
+                                "val": "16"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::INSTLIB Prefix",
+                                "G_SETTINGSCLASS_INSTLIB_PREFIX"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "INSTLIB.",
+                            "label": {
+                                "_": "SettingsClass::INSTLIB Prefix: "
+                            },
+                            "name": "G_SETTINGSCLASS_INSTLIB_PREFIX",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_INSTLIB_PREFIX",
+                                "val": "INSTLIB."
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::INSTLIB Table",
+                                "G_SETTINGSCLASS_INSTLIB_TABLE"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "EFILS.INSTLIB",
+                            "label": {
+                                "_": "SettingsClass::INSTLIB Table: "
+                            },
+                            "name": "G_SETTINGSCLASS_INSTLIB_TABLE",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_INSTLIB_TABLE",
+                                "val": "EFILS.INSTLIB"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Log Retrieved records",
+                                "G_SETTINGSCLASS_LOG_RETRIEVED_RECORDS"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "false",
+                            "label": {
+                                "_": "SettingsClass::Log Retrieved records: "
+                            },
+                            "name": "G_SETTINGSCLASS_LOG_RETRIEVED_RECORDS",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_LOG_RETRIEVED_RECORDS",
+                                "val": "false"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Query to test",
+                                "G_SETTINGSCLASS_QUERY_TO_TEST"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "",
+                            "label": {
+                                "_": "SettingsClass::Query to test: "
+                            },
+                            "name": "G_SETTINGSCLASS_QUERY_TO_TEST",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_QUERY_TO_TEST"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Sql Test",
+                                "G_SETTINGSCLASS_SQL_TEST"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "false",
+                            "label": {
+                                "_": "SettingsClass::Sql Test: "
+                            },
+                            "name": "G_SETTINGSCLASS_SQL_TEST",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_SQL_TEST",
+                                "val": "false"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::INTPLG Prefix",
+                                "G_SETTINGSCLASS_INTPLG_PREFIX"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "INSTPLG.",
+                            "label": {
+                                "_": "SettingsClass::INTPLG Prefix: "
+                            },
+                            "name": "G_SETTINGSCLASS_INTPLG_PREFIX",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_INTPLG_PREFIX",
+                                "val": "INSTPLG."
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::INSTPLG Table",
+                                "G_SETTINGSCLASS_INSTPLG_TABLE"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "EFILS.INSTPLG",
+                            "label": {
+                                "_": "SettingsClass::INSTPLG Table: "
+                            },
+                            "name": "G_SETTINGSCLASS_INSTPLG_TABLE",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_INSTPLG_TABLE",
+                                "val": "EFILS.INSTPLG"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Regex for Date",
+                                "G_SETTINGSCLASS_REGEX_FOR_DATE"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "(209[0-9]|208[0-9]|207[0-9]|206[0-9]|205[0-9]|204[0-9]|203[0-9]|202[0-9]|201[0-9]|200[0-9]|[0-1][0-9]{3})(1[0-2]|0[1-9])(3[01]|[0-2][1-9]|[12]0)",
+                            "label": {
+                                "_": "SettingsClass::Regex for Date: "
+                            },
+                            "name": "G_SETTINGSCLASS_REGEX_FOR_DATE",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_REGEX_FOR_DATE",
+                                "val": "(209[0-9]|208[0-9]|207[0-9]|206[0-9]|205[0-9]|204[0-9]|203[0-9]|202[0-9]|201[0-9]|200[0-9]|[0-1][0-9]{3})(1[0-2]|0[1-9])(3[01]|[0-2][1-9]|[12]0)"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Regex for three digits",
+                                "G_SETTINGSCLASS_REGEX_FOR_THREE_DIGITS"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "^\\d{1,2}(?:\\d)?$",
+                            "label": {
+                                "_": "SettingsClass::Regex for three digits: "
+                            },
+                            "name": "G_SETTINGSCLASS_REGEX_FOR_THREE_DIGITS",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_REGEX_FOR_THREE_DIGITS",
+                                "val": "^\\d{1,2}(?:\\d)?$"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Sender",
+                                "G_SETTINGSCLASS_EMAIL_SENDER"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "esb_dev@bsp.gov.ph",
+                            "label": {
+                                "_": "SettingsClass::Email Sender: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_SENDER",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_SENDER",
+                                "val": "esb_dev@bsp.gov.ph"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email host",
+                                "G_SETTINGSCLASS_EMAIL_HOST"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "10.2.255.45",
+                            "label": {
+                                "_": "SettingsClass::Email host: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_HOST",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_HOST",
+                                "val": "10.2.255.45"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Port",
+                                "G_SETTINGSCLASS_EMAIL_PORT"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "25",
+                            "label": {
+                                "_": "SettingsClass::Email Port: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_PORT",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_PORT",
+                                "val": "25"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Protocol",
+                                "G_SETTINGSCLASS_EMAIL_PROTOCOL"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "smtp",
+                            "label": {
+                                "_": "SettingsClass::Email Protocol: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_PROTOCOL",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_PROTOCOL",
+                                "val": "smtp"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Security",
+                                "G_SETTINGSCLASS_EMAIL_SECURITY"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "none",
+                            "label": {
+                                "_": "SettingsClass::Email Security: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_SECURITY",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_SECURITY",
+                                "val": "none"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email username",
+                                "G_SETTINGSCLASS_EMAIL_USERNAME"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "",
+                            "label": {
+                                "_": "SettingsClass::Email username: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_USERNAME",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_USERNAME"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Password",
+                                "G_SETTINGSCLASS_EMAIL_PASSWORD"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "",
+                            "label": {
+                                "_": "SettingsClass::Email Password: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_PASSWORD",
+                            "schema": {
+                                "type": "password"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_PASSWORD"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Recipients",
+                                "G_SETTINGSCLASS_EMAIL_RECIPIENTS"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "",
+                            "label": {
+                                "_": "SettingsClass::Email Recipients: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_RECIPIENTS",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_RECIPIENTS"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email CC Recipients",
+                                "G_SETTINGSCLASS_EMAIL_CC_RECIPIENTS"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "",
+                            "label": {
+                                "_": "SettingsClass::Email CC Recipients: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_CC_RECIPIENTS",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_CC_RECIPIENTS"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Verify Host",
+                                "G_SETTINGSCLASS_EMAIL_VERIFY_HOST"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "false",
+                            "label": {
+                                "_": "SettingsClass::Email Verify Host: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_VERIFY_HOST",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_VERIFY_HOST",
+                                "val": "false"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Timeout",
+                                "G_SETTINGSCLASS_EMAIL_TIMEOUT"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "60",
+                            "label": {
+                                "_": "SettingsClass::Email Timeout: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_TIMEOUT",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_TIMEOUT",
+                                "val": "60"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email debug",
+                                "G_SETTINGSCLASS_EMAIL_DEBUG"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "false",
+                            "label": {
+                                "_": "SettingsClass::Email debug: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_DEBUG",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_DEBUG",
+                                "val": "false"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Subject",
+                                "G_SETTINGSCLASS_EMAIL_SUBJECT"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "ESB: Error in DB2 Backend",
+                            "label": {
+                                "_": "SettingsClass::Email Subject: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_SUBJECT",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_SUBJECT",
+                                "val": "ESB: Error in DB2 Backend"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Body 1",
+                                "G_SETTINGSCLASS_EMAIL_BODY_1"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "Please be informed that the eFils service encountered an error when connecting to the DB2 Database. Below are the details:",
+                            "label": {
+                                "_": "SettingsClass::Email Body 1: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_BODY_1",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_1",
+                                "val": "Please be informed that the eFils service encountered an error when connecting to the DB2 Database. Below are the details:"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Body 2",
+                                "G_SETTINGSCLASS_EMAIL_BODY_2"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "Error Code:",
+                            "label": {
+                                "_": "SettingsClass::Email Body 2: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_BODY_2",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_2",
+                                "val": "Error Code:"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Body 3",
+                                "G_SETTINGSCLASS_EMAIL_BODY_3"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "Error Description:",
+                            "label": {
+                                "_": "SettingsClass::Email Body 3: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_BODY_3",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_3",
+                                "val": "Error Description:"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Body 4",
+                                "G_SETTINGSCLASS_EMAIL_BODY_4"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "Complete Error Description:",
+                            "label": {
+                                "_": "SettingsClass::Email Body 4: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_BODY_4",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_4",
+                                "val": "Complete Error Description:"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Body 5",
+                                "G_SETTINGSCLASS_EMAIL_BODY_5"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "Please conduct investigation and apply fix as needed.",
+                            "label": {
+                                "_": "SettingsClass::Email Body 5: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_BODY_5",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_5",
+                                "val": "Please conduct investigation and apply fix as needed."
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::URL of Email Base service",
+                                "G_SETTINGSCLASS_URL_OF_EMAIL_BASE_SERVICE"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "https://10.100.0.232/bsp/gateway/bspOrg/BaseServiceSendEmailNoProxy/1.0/send?apikey=d30095b9-48e6-45d6-b92d-9c52f8caabc",
+                            "label": {
+                                "_": "SettingsClass::URL of Email Base service: "
+                            },
+                            "name": "G_SETTINGSCLASS_URL_OF_EMAIL_BASE_SERVICE",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_URL_OF_EMAIL_BASE_SERVICE",
+                                "val": "https://10.100.0.232/bsp/gateway/bspOrg/BaseServiceSendEmailNoProxy/1.0/send?apikey=d30095b9-48e6-45d6-b92d-9c52f8caabc"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "global_SettingsClass::Email Attention",
+                                "G_SETTINGSCLASS_EMAIL_ATTENTION"
+                            ],
+                            "category": "Global Settings",
+                            "defaultValue": "Attention: ITSMS3 Support Team.",
+                            "label": {
+                                "_": "SettingsClass::Email Attention: "
+                            },
+                            "name": "G_SETTINGSCLASS_EMAIL_ATTENTION",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "Settings / Deployment Macros",
+                            "docker": {
+                                "env": "XUMLT_S_G_SETTINGSCLASS_EMAIL_ATTENTION",
+                                "val": "Attention: ITSMS3 Support Team."
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_URLAlias_URL",
+                                "AL_URLALIAS_URL"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "https://localhost",
+                            "label": {
+                                "_": "URLAlias: URL: "
+                            },
+                            "name": "AL_URLALIAS_URL",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "URL Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_AL_URLALIAS_URL",
+                                "val": "https://localhost"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_URLAlias_Method",
+                                "AL_URLALIAS_METHOD"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "GET",
+                            "label": {
+                                "_": "URLAlias: Method: "
+                            },
+                            "name": "AL_URLALIAS_METHOD",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "URL Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_AL_URLALIAS_METHOD",
+                                "val": "GET"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_URLAlias_SSL_VerifyPeer",
+                                "AL_URLALIAS_SSL_VERIFYPEER"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "Off",
+                            "label": {
+                                "_": "URLAlias: SSL: VerifyPeer: "
+                            },
+                            "name": "AL_URLALIAS_SSL_VERIFYPEER",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "URL Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_AL_URLALIAS_SSL_VERIFYPEER",
+                                "val": "Off"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_URLAlias_SSL_VerifyHost",
+                                "AL_URLALIAS_SSL_VERIFYHOST"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "Off",
+                            "label": {
+                                "_": "URLAlias: SSL: VerifyHost: "
+                            },
+                            "name": "AL_URLALIAS_SSL_VERIFYHOST",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "URL Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_AL_URLALIAS_SSL_VERIFYHOST",
+                                "val": "Off"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "ALIAS_URLAlias_SSL_CAInfo",
+                                "AL_URLALIAS_SSL_CAINFO"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "/",
+                            "label": {
+                                "_": "URLAlias: SSL: CAInfo: "
+                            },
+                            "name": "AL_URLALIAS_SSL_CAINFO",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "URL Adapter",
+                            "docker": {
+                                "env": "XUMLT_S_AL_URLALIAS_SSL_CAINFO",
+                                "val": "/"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_xUMLControllerService_MaximumConnections",
+                                "CTRL_MAXIMUMCONNECTIONS"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": 50,
+                            "label": {
+                                "_": "xUMLControllerService: MaximumConnections: "
+                            },
+                            "name": "CTRL_MAXIMUMCONNECTIONS",
+                            "schema": {
+                                "type": "integer"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_CTRL_MAXIMUMCONNECTIONS",
+                                "val": "50"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_xUMLControllerService_ResolveHostnames",
+                                "CTRL_RESOLVEHOSTNAMES"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "xUMLControllerService: ResolveHostnames: "
+                            },
+                            "name": "CTRL_RESOLVEHOSTNAMES",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_CTRL_RESOLVEHOSTNAMES",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_xUMLControllerService_Port",
+                                "CTRL_PORT"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": 21119,
+                            "label": {
+                                "_": "xUMLControllerService: Port: "
+                            },
+                            "name": "CTRL_PORT",
+                            "schema": {
+                                "type": "integer"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_CTRL_PORT",
+                                "val": "21119"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_xUMLControllerService_JSONComposerOptions_keepNulls",
+                                "CTRL_JSONCOMPOSEROPTIONS_KEEPNULLS"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": false,
+                            "label": {
+                                "_": "xUMLControllerService: JSONComposerOptions: keepNulls"
+                            },
+                            "name": "CTRL_JSONCOMPOSEROPTIONS_KEEPNULLS",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_CTRL_JSONCOMPOSEROPTIONS_KEEPNULLS",
+                                "val": "false"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_xUMLControllerService_JSONComposerOptions_compact",
+                                "CTRL_JSONCOMPOSEROPTIONS_COMPACT"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "xUMLControllerService: JSONComposerOptions: compact"
+                            },
+                            "name": "CTRL_JSONCOMPOSEROPTIONS_COMPACT",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_CTRL_JSONCOMPOSEROPTIONS_COMPACT",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_xUMLControllerService_JSONComposerOptions_writeTypeDiscriminator",
+                                "CTRL_JSONCOMPOSEROPTIONS_WRITETYPEDISCRIMINATOR"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "xUMLControllerService: JSONComposerOptions: writeTypeDiscriminator"
+                            },
+                            "name": "CTRL_JSONCOMPOSEROPTIONS_WRITETYPEDISCRIMINATOR",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_CTRL_JSONCOMPOSEROPTIONS_WRITETYPEDISCRIMINATOR",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_RestTestToolCacheControl",
+                                "AO_RESTTESTTOOLCACHECONTROL"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "max-age=2592000, public",
+                            "label": {
+                                "_": "Test Tool: Cache Control: value: "
+                            },
+                            "name": "AO_RESTTESTTOOLCACHECONTROL",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST HTTP Server",
+                            "docker": {
+                                "env": "XUMLT_S_AO_RESTTESTTOOLCACHECONTROL",
+                                "val": "max-age=2592000, public"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_RestDescriptorCacheControl",
+                                "AO_RESTDESCRIPTORCACHECONTROL"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "no-cache",
+                            "label": {
+                                "_": "Descriptor: Cache Control: value: "
+                            },
+                            "name": "AO_RESTDESCRIPTORCACHECONTROL",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST HTTP Server",
+                            "docker": {
+                                "env": "XUMLT_S_AO_RESTDESCRIPTORCACHECONTROL",
+                                "val": "no-cache"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_UILibraryPath_RestUILibraryCacheControl",
+                                "AO_UILIBRARYPATH_RESTUILIBRARYCACHECONTROL"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "max-age=2592000, public",
+                            "label": {
+                                "_": "Library Cache Control: value: "
+                            },
+                            "name": "AO_UILIBRARYPATH_RESTUILIBRARYCACHECONTROL",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "REST HTTP Server",
+                            "docker": {
+                                "env": "XUMLT_S_AO_UILIBRARYPATH_RESTUILIBRARYCACHECONTROL",
+                                "val": "max-age=2592000, public"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_RESTService_Component_View.Composites.eFils.RESTService_Enabled",
+                                "AO_RESTSERVICE_EFILS_RESTSERVICE_ENABLED"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "RESTService: enabled: "
+                            },
+                            "name": "AO_RESTSERVICE_EFILS_RESTSERVICE_ENABLED",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_AO_RESTSERVICE_EFILS_RESTSERVICE_ENABLED",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_RESTService_MaxRequestBodySize",
+                                "AO_SRV_RESTSERVICE_MAXREQUESTBODYSIZE"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": 2048,
+                            "label": {
+                                "_": "RESTService: MaxRequestBodySize"
+                            },
+                            "name": "AO_SRV_RESTSERVICE_MAXREQUESTBODYSIZE",
+                            "schema": {
+                                "type": "integer"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SRV_RESTSERVICE_MAXREQUESTBODYSIZE",
+                                "val": "2048"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_RESTService_MaximumConnections",
+                                "AO_SRV_RESTSERVICE_MAXIMUMCONNECTIONS"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": 50,
+                            "label": {
+                                "_": "RESTService: MaximumConnections: "
+                            },
+                            "name": "AO_SRV_RESTSERVICE_MAXIMUMCONNECTIONS",
+                            "schema": {
+                                "type": "integer"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SRV_RESTSERVICE_MAXIMUMCONNECTIONS",
+                                "val": "50"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_RESTService_ResolveHostnames",
+                                "AO_SRV_RESTSERVICE_RESOLVEHOSTNAMES"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "RESTService: ResolveHostnames: "
+                            },
+                            "name": "AO_SRV_RESTSERVICE_RESOLVEHOSTNAMES",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SRV_RESTSERVICE_RESOLVEHOSTNAMES",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_RESTService_Port",
+                                "AO_SRV_RESTSERVICE_PORT"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": 11119,
+                            "label": {
+                                "_": "RESTService: Port: "
+                            },
+                            "name": "AO_SRV_RESTSERVICE_PORT",
+                            "schema": {
+                                "type": "integer"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SRV_RESTSERVICE_PORT",
+                                "val": "11119"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_RESTService_JSONComposerOptions_keepNulls",
+                                "AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_KEEPNULLS"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "RESTService: JSONComposerOptions: keepNulls"
+                            },
+                            "name": "AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_KEEPNULLS",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_KEEPNULLS",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_RESTService_JSONComposerOptions_compact",
+                                "AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_COMPACT"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "RESTService: JSONComposerOptions: compact"
+                            },
+                            "name": "AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_COMPACT",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_COMPACT",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Services_Service_RESTService_JSONComposerOptions_writeTypeDiscriminator",
+                                "AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_WRITETYPEDISCRIMINATOR"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "RESTService: JSONComposerOptions: writeTypeDiscriminator"
+                            },
+                            "name": "AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_WRITETYPEDISCRIMINATOR",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "REST Service Base",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_WRITETYPEDISCRIMINATOR",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SOAP_AllowTracing",
+                                "AO_SOAP_ALLOWTRACING"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "Allow Tracing (true/false): "
+                            },
+                            "name": "AO_SOAP_ALLOWTRACING",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "SOAP HTTP Server",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SOAP_ALLOWTRACING",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SEI_HTTP_Service_MaximumConnections",
+                                "AO_SOAP_MAXIMUMCONNECTIONS"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": 50,
+                            "label": {
+                                "_": "MaximumConnections: "
+                            },
+                            "name": "AO_SOAP_MAXIMUMCONNECTIONS",
+                            "schema": {
+                                "type": "integer"
+                            },
+                            "section": "SOAP HTTP Server",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SOAP_MAXIMUMCONNECTIONS",
+                                "val": "50"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_SEI_HTTP_Service_ResolveHostnames",
+                                "AO_SOAP_RESOLVEHOSTNAMES"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": true,
+                            "label": {
+                                "_": "ResolveHostnames: "
+                            },
+                            "name": "AO_SOAP_RESOLVEHOSTNAMES",
+                            "schema": {
+                                "type": "boolean"
+                            },
+                            "section": "SOAP HTTP Server",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SOAP_RESOLVEHOSTNAMES",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_service_RESTService_RESTService_shadow_port",
+                                "AO_SSRV_RESTSERVICE_PORT"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": 51119,
+                            "label": {
+                                "_": "RESTServicePort: "
+                            },
+                            "name": "AO_SSRV_RESTSERVICE_PORT",
+                            "schema": {
+                                "type": "integer"
+                            },
+                            "section": "SOAP HTTP Server",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SSRV_RESTSERVICE_PORT",
+                                "val": "51119"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_RESTService.eFilsRest_Enabled",
+                                "AO_RESTSERVICE_EFILSREST_ENABLED"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "true",
+                            "label": {
+                                "_": "RESTService: eFilsRest: enabled: "
+                            },
+                            "name": "AO_RESTSERVICE_EFILSREST_ENABLED",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SOAP HTTP Service Request",
+                            "docker": {
+                                "env": "XUMLT_S_AO_RESTSERVICE_EFILSREST_ENABLED",
+                                "val": "true"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_RESTService.eFilsRest_URI",
+                                "SETTING_0472B1DB0CB06188485C116D8DC0CA55"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "/eFilsRest",
+                            "label": {
+                                "_": "RESTService: eFilsRest: URI: "
+                            },
+                            "name": "SETTING_0472B1DB0CB06188485C116D8DC0CA55",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SOAP HTTP Service Request",
+                            "docker": {
+                                "env": "XUMLT_S_SETTING_0472B1DB0CB06188485C116D8DC0CA55",
+                                "val": "/eFilsRest"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "wsdl_host_urn:Component_View.Composites.eFils.RESTService",
+                                "SETTING_91BB4524CF0946751997BA4967FC1596"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "${server_hostname}",
+                            "label": {
+                                "_": "WSDL: RESTService host: "
+                            },
+                            "name": "SETTING_91BB4524CF0946751997BA4967FC1596",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "WSDL RESTService",
+                            "docker": {
+                                "env": "XUMLT_S_SETTING_91BB4524CF0946751997BA4967FC1596",
+                                "val": "${server_hostname}"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Settings_FieldPadding",
+                                "AO_SETTINGS_FIELDPADDING"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "NEVER",
+                            "label": {
+                                "_": "FieldPadding: "
+                            },
+                            "name": "AO_SETTINGS_FIELDPADDING",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SAP Global",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SETTINGS_FIELDPADDING",
+                                "val": "NEVER"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Settings_DefaultConnectionPoolSize",
+                                "AO_SETTINGS_DEFAULTCONNECTIONPOOLSIZE"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "10",
+                            "label": {
+                                "_": "DefaultConnectionPoolSize: "
+                            },
+                            "name": "AO_SETTINGS_DEFAULTCONNECTIONPOOLSIZE",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SAP Global",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SETTINGS_DEFAULTCONNECTIONPOOLSIZE",
+                                "val": "10"
+                            }
+                        },
+                        {
+                            "aliases": [
+                                "addOn_Settings_ServerWorkerThreads",
+                                "AO_SETTINGS_SERVERWORKERTHREADS"
+                            ],
+                            "category": "Add-Ons",
+                            "defaultValue": "1",
+                            "label": {
+                                "_": "ServerWorkerThreads: "
+                            },
+                            "name": "AO_SETTINGS_SERVERWORKERTHREADS",
+                            "schema": {
+                                "type": "string"
+                            },
+                            "section": "SAP Global",
+                            "docker": {
+                                "env": "XUMLT_S_AO_SETTINGS_SERVERWORKERTHREADS",
+                                "val": "1"
+                            }
+                        }
+                    ],
+                    "ui": []
+                },
+                "deployment": {
+                    "name": "efils20260611",
+                    "created": 1785281046000,
+                    "started": 1785282967243,
+                    "user": "vvallejo",
+                    "labels": {
+                        "com.scheer-pas.base-image": "pcr.pas-cloud.com/pas/xuml-service-base:2025.12",
+                        "com.scheer-pas.build-user": "vvallejo",
+                        "com.scheer-pas.container-type": "xuml-service",
+                        "com.scheer-pas.deployment-user": "vvallejo",
+                        "platform.scheer-pas.com/last-applied": "2026-07-28T23:24:06.667Z",
+                        "platform.scheer-pas.com/restartedAt": "2026-07-28T23:56:07.243Z",
+                        "platform.scheer-pas.com/restartedBy": "service-repository-api/vvallejo"
+                    },
+                    "limits": {
+                        "memory": 268435456
+                    },
+                    "running": true,
+                    "version": "1.1.0",
+                    "env": [
+                        "SERVICE_NAME=efils20260611",
+                        "XUML_UI_CONFIG=/opt/scheer/ui-config/xuml.json5",
+                        "XUML_EXCLUDE_FILES=repository/htdocs/assets/config/xuml.json5",
+                        "MARIADB_HOST=pas-mariadb",
+                        "DB_NAME=pas_xuml_efils20260611",
+                        "XUMLT_S_G_KEYCLOAKINSTANCE_CLIENTID=xuml-default-client",
+                        "XUMLT_S_G_KEYCLOAKINSTANCE_CLIENTSECRET=EPbwzOfW!QcuBy8p",
+                        "XUMLT_S_AL_PAS_PLATFORM__KEYCLOAKALIAS_BASEPATH=/pas/keycloak/realms/PAS",
+                        "XUMLT_S_AL_PAS_PLATFORM__KEYCLOAKALIAS_HOST=pas-keycloak",
+                        "XUMLT_S_AL_PAS_PLATFORM__KEYCLOAKALIAS_PORT=443",
+                        "XUMLT_S_AL_PAS_PLATFORM__KEYCLOAKALIAS_PROTOCOL=https",
+                        "XUMLT_S_AL_PAS_PLATFORM__KEYCLOACKALIAS_SSL_VERIFYHOST=On",
+                        "XUMLT_S_AL_PAS_PLATFORM__KEYCLOACKALIAS_SSL_VERIFYPEER=On",
+                        "XUMLT_S_AL_PS_DATABASE=StateDB",
+                        "XUMLT_S_AO_STATEDB_USER=pas-efils20260611",
+                        "XUMLT_S_AO_STATEDB_PWD=kGO#DPK6XdWvEorc",
+                        "XUMLT_S_AO_STATEDB_DBTYPE=MariaDB",
+                        "XUMLT_S_AO_STATEDB_DBNAME=$(MARIADB_HOST)@$(DB_NAME)",
+                        "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_basePath=/base/api/sendmail/SendEmailAPI",
+                        "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_host=localhost",
+                        "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_port=5445",
+                        "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_Location_protocol=https",
+                        "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_verifyPeer=Off",
+                        "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_verifyHost=Off",
+                        "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_SSL_CAInfo=./",
+                        "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_JSONComposerOptions_keepNulls=false",
+                        "XUMLT_S_ALIAS_libSendMailWrapper__SendEmailAPIAlias_JSONComposerOptions_compact=true",
+                        "XUMLT_S_addOn_libSendMailWrapper__UILibraryPath_UILibraryCacheControl=max-age=2592000, public",
+                        "XUMLT_S_SETTING_B5864D242EA04543E238752BA662BA0A=true",
+                        "XUMLT_S_SETTING_06637E9D6BC72B9D792F3E8166F51E96=false",
+                        "XUMLT_S_SETTING_A6C7265FCEFC596D14DF14FAEBCCA214=*",
+                        "XUMLT_S_SETTING_2FBEC414E81CD49B3CA726C20103040B=*",
+                        "XUMLT_S_addOn_UILibraryPath_UILibraryCacheControl=max-age=2592000, public",
+                        "XUMLT_S_AL_PS_WORKERLIMIT=2",
+                        "XUMLT_S_AL_PS_OWNER=eFils",
+                        "XUMLT_S_AO_SQLALIAS_DBTYPE=DB2",
+                        "XUMLT_S_AO_SQLALIAS_DBNAME=con",
+                        "XUMLT_S_AO_SQLALIAS_UNICODEMODE=Platform default",
+                        "XUMLT_S_AO_SQLALIAS_CONNECTIONPOOLING=true",
+                        "XUMLT_S_AO_SQLALIAS_MAXCONNECTIONREUSE=1000",
+                        "XUMLT_S_AO_SQLALIAS_MAXCONNECTIONAGE=15",
+                        "XUMLT_S_AO_SQLALIAS_MAXCONNECTIONIDLETIME=60",
+                        "XUMLT_S_AO_SQLALIAS_USER=user",
+                        "XUMLT_S_AO_SQLALIAS_PWD=test",
+                        "XUMLT_S_global_getCompositeName=eFils",
+                        "XUMLT_S_G_SETTINGSCLASS_CHCODE05=13",
+                        "XUMLT_S_G_SETTINGSCLASS_CHCODE06=13",
+                        "XUMLT_S_G_SETTINGSCLASS_CHCODE10=13",
+                        "XUMLT_S_G_SETTINGSCLASS_CHCODE11=15",
+                        "XUMLT_S_G_SETTINGSCLASS_CHCODE12=15",
+                        "XUMLT_S_G_SETTINGSCLASS_CHCODE13=16",
+                        "XUMLT_S_G_SETTINGSCLASS_INSTLIB_PREFIX=INSTLIB.",
+                        "XUMLT_S_G_SETTINGSCLASS_INSTLIB_TABLE=EFILS.INSTLIB",
+                        "XUMLT_S_G_SETTINGSCLASS_LOG_RETRIEVED_RECORDS=false",
+                        "XUMLT_S_G_SETTINGSCLASS_QUERY_TO_TEST=",
+                        "XUMLT_S_G_SETTINGSCLASS_SQL_TEST=false",
+                        "XUMLT_S_G_SETTINGSCLASS_INTPLG_PREFIX=INSTPLG.",
+                        "XUMLT_S_G_SETTINGSCLASS_INSTPLG_TABLE=EFILS.INSTPLG",
+                        "XUMLT_S_G_SETTINGSCLASS_REGEX_FOR_DATE=(209[0-9]|208[0-9]|207[0-9]|206[0-9]|205[0-9]|204[0-9]|203[0-9]|202[0-9]|201[0-9]|200[0-9]|[0-1][0-9]{3})(1[0-2]|0[1-9])(3[01]|[0-2][1-9]|[12]0)",
+                        "XUMLT_S_G_SETTINGSCLASS_REGEX_FOR_THREE_DIGITS=^\\d{1,2}(?:\\d)?$",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_SENDER=esb_dev@bsp.gov.ph",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_HOST=10.2.255.45",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_PORT=25",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_PROTOCOL=smtp",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_SECURITY=none",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_USERNAME=",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_PASSWORD=",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_RECIPIENTS=",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_CC_RECIPIENTS=",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_VERIFY_HOST=false",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_TIMEOUT=60",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_DEBUG=false",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_SUBJECT=ESB: Error in DB2 Backend",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_1=Please be informed that the eFils service encountered an error when connecting to the DB2 Database. Below are the details:",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_2=Error Code:",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_3=Error Description:",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_4=Complete Error Description:",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_BODY_5=Please conduct investigation and apply fix as needed.",
+                        "XUMLT_S_G_SETTINGSCLASS_URL_OF_EMAIL_BASE_SERVICE=https://10.100.0.232/bsp/gateway/bspOrg/BaseServiceSendEmailNoProxy/1.0/send?apikey=d30095b9-48e6-45d6-b92d-9c52f8caabc",
+                        "XUMLT_S_G_SETTINGSCLASS_EMAIL_ATTENTION=Attention: ITSMS3 Support Team.",
+                        "XUMLT_S_AL_URLALIAS_URL=https://localhost",
+                        "XUMLT_S_AL_URLALIAS_METHOD=GET",
+                        "XUMLT_S_AL_URLALIAS_SSL_VERIFYPEER=Off",
+                        "XUMLT_S_AL_URLALIAS_SSL_VERIFYHOST=Off",
+                        "XUMLT_S_AL_URLALIAS_SSL_CAINFO=/",
+                        "XUMLT_S_CTRL_MAXIMUMCONNECTIONS=50",
+                        "XUMLT_S_CTRL_RESOLVEHOSTNAMES=true",
+                        "XUMLT_S_CTRL_PORT=21119",
+                        "XUMLT_S_CTRL_JSONCOMPOSEROPTIONS_KEEPNULLS=false",
+                        "XUMLT_S_CTRL_JSONCOMPOSEROPTIONS_COMPACT=true",
+                        "XUMLT_S_CTRL_JSONCOMPOSEROPTIONS_WRITETYPEDISCRIMINATOR=true",
+                        "XUMLT_S_AO_RESTTESTTOOLCACHECONTROL=max-age=2592000, public",
+                        "XUMLT_S_AO_RESTDESCRIPTORCACHECONTROL=no-cache",
+                        "XUMLT_S_AO_UILIBRARYPATH_RESTUILIBRARYCACHECONTROL=max-age=2592000, public",
+                        "XUMLT_S_AO_RESTSERVICE_EFILS_RESTSERVICE_ENABLED=true",
+                        "XUMLT_S_AO_SRV_RESTSERVICE_MAXREQUESTBODYSIZE=2048",
+                        "XUMLT_S_AO_SRV_RESTSERVICE_MAXIMUMCONNECTIONS=50",
+                        "XUMLT_S_AO_SRV_RESTSERVICE_RESOLVEHOSTNAMES=true",
+                        "XUMLT_S_AO_SRV_RESTSERVICE_PORT=11119",
+                        "XUMLT_S_AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_KEEPNULLS=true",
+                        "XUMLT_S_AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_COMPACT=true",
+                        "XUMLT_S_AO_SRV_RESTSERVICE_JSONCOMPOSEROPTIONS_WRITETYPEDISCRIMINATOR=true",
+                        "XUMLT_S_AO_SOAP_ALLOWTRACING=true",
+                        "XUMLT_S_AO_SOAP_MAXIMUMCONNECTIONS=50",
+                        "XUMLT_S_AO_SOAP_RESOLVEHOSTNAMES=true",
+                        "XUMLT_S_AO_SSRV_RESTSERVICE_PORT=51119",
+                        "XUMLT_S_AO_RESTSERVICE_EFILSREST_ENABLED=true",
+                        "XUMLT_S_SETTING_0472B1DB0CB06188485C116D8DC0CA55=/eFilsRest",
+                        "XUMLT_S_SETTING_91BB4524CF0946751997BA4967FC1596=${server_hostname}",
+                        "XUMLT_S_AO_SETTINGS_FIELDPADDING=NEVER",
+                        "XUMLT_S_AO_SETTINGS_DEFAULTCONNECTIONPOOLSIZE=10",
+                        "XUMLT_S_AO_SETTINGS_SERVERWORKERTHREADS=1"
+                    ],
+                    "hostname": "pas-efils20260611",
+                    "image": "harbor.onetoolapps.com:30003/pas/efils20260611:1.1.0",
+                    "source": "kubernetes"
+                }
+            },
+            "endpoints": [
+                {
+                    "name": "xUMLControllerService",
+                    "type": "control",
+                    "private": {
+                        "path": "http://pas-efils20260611:21119/api",
+                        "descriptor": "http://pas-efils20260611:21119/e2e.rest.descriptors/xUMLControllerService.xUML%20Runtime%20API.yaml"
+                    },
+                    "public": {
+                        "path": "https://k8s.onetoolapps.com/pas/xuml/control/efils20260611/xUMLControllerService/api",
+                        "descriptor": "https://k8s.onetoolapps.com/pas/xuml/control/efils20260611/xUMLControllerService/e2e.rest.descriptors/xUMLControllerService.xUML Runtime API.yaml"
+                    }
+                },
+                {
+                    "name": "eFilsRest",
+                    "type": "rest",
+                    "private": {
+                        "path": "http://pas-efils20260611:11119/eFilsRest",
+                        "descriptor": "http://pas-efils20260611:11119/e2e.rest.descriptors/RESTService.eFilsRest.yaml"
+                    },
+                    "public": {
+                        "path": "https://k8s.onetoolapps.com/pas/xuml/rest/efils20260611/RESTService/eFilsRest",
+                        "descriptor": "https://k8s.onetoolapps.com/pas/xuml/rest/efils20260611/RESTService/e2e.rest.descriptors/RESTService.eFilsRest.yaml"
+                    }
+                },
+                {
+                    "name": "eFilsRest",
+                    "type": "shadow",
+                    "private": {
+                        "path": "http://pas-efils20260611:51119/eFilsRest",
+                        "descriptor": "http://pas-efils20260611:51119/RESTService?wsdl"
+                    },
+                    "public": {
+                        "path": "https://k8s.onetoolapps.com/pas/xuml/shadow/efils20260611/RESTService/eFilsRest",
+                        "descriptor": "https://k8s.onetoolapps.com/pas/xuml/shadow/efils20260611/RESTService/RESTService?wsdl"
+                    }
+                }
+            ]
+        }
+    }
+]

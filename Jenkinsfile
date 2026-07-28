@@ -9,38 +9,16 @@ pipeline {
             }
         }
 
-        stage('Extract Metadata') {
+        stage('Discover REP Files') {
             steps {
-                bat 'python scripts\\extract_metadata.py'
+                bat 'python scripts\\list_changes.py'
             }
         }
 
-        stage('Get Token') {
-            steps {
-                bat 'python scripts\\get_token.py'
-            }
-        }
-
-        stage('Upload File Storage') {
-            steps {
-                bat 'python scripts\\upload_filestorage.py'
-            }
-        }
-
-        stage('Deploy PAS') {
+        stage('Deploy') {
             steps {
                 bat 'python scripts\\deploy.py'
             }
-        }
-    }
-
-    post {
-        success {
-            echo "Deployment successful"
-        }
-
-        failure {
-            echo "Deployment failed"
         }
     }
 }
