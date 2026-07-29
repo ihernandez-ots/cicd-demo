@@ -18,6 +18,12 @@ def discover_changed_rep_files():
         check=True
     )
 
+    print(subprocess.run(
+        ["git", "log", "--oneline", "-2"],
+        capture_output=True,
+        text=True
+    ).stdout)
+
     rep_files = []
 
     for line in result.stdout.splitlines():
@@ -86,18 +92,18 @@ def save_deployments(deployments):
             indent=4
         )
 
-def run():
+# def run():
 
-    rep_files = discover_changed_rep_files()
+#     rep_files = discover_changed_rep_files()
 
-    if not rep_files:
-        return []
+#     if not rep_files:
+#         return []
 
-    deployments = build_deployment_list(rep_files)
+#     deployments = build_deployment_list(rep_files)
 
-    save_deployments(deployments)
+#     save_deployments(deployments)
 
-    return deployments
+#     return deployments
 
 def main():
 

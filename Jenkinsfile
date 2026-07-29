@@ -2,7 +2,17 @@ pipeline {
     agent any
 
     stages {
-
+        
+        stage('Environment Check') {
+            steps {
+                bat '''
+                    python --version
+                    where python
+                    cd
+                    dir
+                '''
+            }
+}
         stage('Checkout') {
             steps {
                 checkout scm
